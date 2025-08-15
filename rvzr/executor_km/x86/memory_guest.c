@@ -346,7 +346,7 @@ static int update_eptp(void)
     ept_ptr = CHECKED_ZALLOC(sizeof(eptp_t) * n_actors);
     for (int actor_id = 0; actor_id < n_actors; actor_id++) {
         actor_ept_t *actor_ept_base = &_allocated_extended_page_tables[actor_id];
-        ept_ptr[actor_id].memory_type = VMX_BASIC_MEM_TYPE_WB;
+        ept_ptr[actor_id].memory_type = X86_MEMTYPE_WB; // VMX_BASIC_MEM_TYPE_WB;
         ept_ptr[actor_id].page_walk_length = 3;
         ept_ptr[actor_id].ad_enabled = 1; // native_read_msr(MSR_IA32_VMX_EPT_VPID_CAP) &0x00200000;
         ept_ptr[actor_id].superv_sdw_stack = 0;
