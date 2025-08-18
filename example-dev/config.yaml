@@ -1,6 +1,6 @@
-working_dir: /home/stuxnot/repos/mpi/sca-fuzzer-example/consfuzz/
+working_dir: /home/yonghyunkim/works/consfuzz-yh/consfuzz/
 force_working_dir_overwrite: True
-model_root: /home/stuxnot/.local/dynamorio/
-afl_root: /nix/store/rsryn5rfik5ils07g7q9153q1khmfm94-aflplusplus-4.32c/bin
-afl_seed_dir: ../sca-fuzzer-example/seeds/
+model_root: /home/yonghyunkim/.local/dynamorio/
+afl_root: /usr/bin
+afl_seed_dir: /home/yonghyunkim/works/consfuzz-yh/seeds/
 
