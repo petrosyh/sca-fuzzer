@@ -18,3 +18,5 @@ dbg/
 site
 dist/
 .cache/
+example-res/
+seeds/
