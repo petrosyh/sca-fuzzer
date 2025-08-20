@@ -37,6 +37,7 @@ class FuzzerCore:
         :param num_sec_inputs: Number of secret (private) inputs to generate for each public input
         :return: 0 if successful, 1 if error occurs
         """
+        #print (f"NUM SEC: {num_sec_inputs}")
         if self.generate_public_inputs(cmd, target_cov, timeout_s) != 0:
             return 1
         print("\n")  # Print a newline for better readability in the console output
@@ -74,6 +75,7 @@ class FuzzerCore:
         tracer = Tracer(self._config)
 
         sec_gen.generate(num_sec_inputs)
+        #print (f"CMD stage2: {cmd}")
         return tracer.collect_traces(cmd)
 
     def report(self, target_binary: str) -> int:

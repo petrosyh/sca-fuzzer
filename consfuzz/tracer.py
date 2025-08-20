@@ -60,6 +60,8 @@ class Tracer:
                         and private (@#) inputs
         :return: 0 if successful, 1 if error occurs
         """
+        #print (f"collect traces cmd: {cmd}")
+        #breakpoint()
         # Check if the traces are deterministic; abort if they are not
         if not self._check_determinism(self._config.stage2_wd, cmd):
             self._log.error("The target binary produces non-deterministic traces. Tracing aborted.")
@@ -72,7 +74,7 @@ class Tracer:
             if not os.path.isdir(input_group_dir):
                 continue
             input_group_dirs.append(input_group_dir)
-
+        #breakpoint()
         # Iterate over all input groups and collect traces
         inputs: List[str] = []
         for input_group_dir in input_group_dirs:
@@ -88,6 +90,7 @@ class Tracer:
         # Initialize a progress bar to track the progress of the tracing process
         progress_bar = tqdm(total=len(inputs))
 
+        #breakpoint()
         # Process each pair
         for input_ in inputs:
             # Expand the command with the public and private inputs

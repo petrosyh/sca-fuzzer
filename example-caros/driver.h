@@ -14,7 +14,7 @@
 /// ================================================================================================
 /// Interfaces
 /// ================================================================================================
-int run_test(input_t *config_ptr, input_t *public_arr, input_t *secret_arr, input_t *idx, uint8_t *output);
+int run_test(input_t *config_ptr, input_t *idx, input_t *public_arr, input_t *secret_arr, uint8_t *output);
 
 
 #endif // DRIVER_H

@@ -65,6 +65,7 @@ class PubGen:
         ]
 
         cmd = [self._afl_bin] + afl_flags + ["--"] + cmd
+        #print (f"AFL CMD: {cmd}")
         # print(cmd, flush=True)
 
         try:

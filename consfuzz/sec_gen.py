@@ -45,6 +45,7 @@ class SecGen:
         :return: 0 if successful, 1 if the reference input is invalid or an error occurs
         """
         # Read the reference input to determine the sizes of public and private data
+        # print(f"REF INPUT PATH: {reference_input}")
         with open(reference_input, 'rb') as f:
             ref_data = f.read()
 
@@ -69,7 +70,7 @@ class SecGen:
             priv_data = os.urandom(priv_size)
             dest_path = os.path.join(wd, f"{i:03}.bin")
             with open(dest_path, 'wb') as dest_file:
-                dest_file.write(config_data + pub_data + priv_data)
+                dest_file.write(config_data + priv_data + pub_data)
 
         return 0
 
@@ -87,6 +88,7 @@ class SecGen:
 
         afl_dir = self._config.stage1_wd + "/default/queue/"
         ref_inputs = [f for f in os.listdir(afl_dir) if os.path.isfile(os.path.join(afl_dir, f))]
+        #print(f"REF INPUTS: {ref_inputs}")
         for ref_input in ref_inputs:
             # Create a directory for each reference input
             ref_input_path = os.path.join(afl_dir, ref_input)

@@ -20,3 +20,4 @@ dist/
 .cache/
 example-res/
 seeds/
+seed_makers/seeds/

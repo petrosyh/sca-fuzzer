@@ -251,6 +251,7 @@ static int parse_inputs(const char *policy_fname, const char *data_fname, input_
     if (read_file(data_fname, &data, &data_size, MIN_TOTAL_SIZE, MAX_TOTAL_SIZE) != 0)
         return -1;
 
+    //printf("Data SZ: %d", &data_size);
     // Get the fuzzing configuration from the input data
     ASSERT(data_size >= CONF_SIZE, "Input data is too small to contain configuration");
     config->data = data;
