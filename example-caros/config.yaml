@@ -1,0 +1,6 @@
+working_dir: /home/yonghyunkim/works/consfuzz-yh/example-res/
+force_working_dir_overwrite: True
+model_root: /home/yonghyunkim/.local/dynamorio/
+afl_root: /usr/bin
+afl_seed_dir: /home/yonghyunkim/works/consfuzz-yh/seeds/
+

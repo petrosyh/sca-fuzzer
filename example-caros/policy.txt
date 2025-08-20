@@ -1,0 +1,3 @@
+idx: pub
+public_arr: pub
+secret_arr: priv
